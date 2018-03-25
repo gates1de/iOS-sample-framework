@@ -13,6 +13,7 @@
 		109946762067FBA8004C06E3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 109946752067FBA8004C06E3 /* Alamofire.framework */; };
 		109946782067FBB2004C06E3 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 109946772067FBB2004C06E3 /* RealmSwift.framework */; };
 		1099467A2067FBBC004C06E3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 109946792067FBBC004C06E3 /* Realm.framework */; };
+		1099467D2067FC55004C06E3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1099467C2067FC55004C06E3 /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		109946752067FBA8004C06E3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		109946772067FBB2004C06E3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		109946792067FBBC004C06E3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		1099467C2067FC55004C06E3 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		1099465C2067FB72004C06E3 /* iOSSampleFramework */ = {
 			isa = PBXGroup;
 			children = (
+				1099467C2067FC55004C06E3 /* RealmManager.swift */,
 				1099465D2067FB72004C06E3 /* iOSSampleFramework.h */,
 				1099465E2067FB72004C06E3 /* Info.plist */,
 			);
@@ -169,6 +172,7 @@
 				TargetAttributes = {
 					109946592067FB72004C06E3 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					109946622067FB72004C06E3 = {
@@ -237,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1099467D2067FC55004C06E3 /* RealmManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +380,7 @@
 		1099466F2067FB72004C06E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +397,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gates1de.iOSSampleFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -399,6 +406,7 @@
 		109946702067FB72004C06E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -423,6 +431,7 @@
 		109946722067FB72004C06E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSSampleFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -436,6 +445,7 @@
 		109946732067FB72004C06E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSSampleFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
